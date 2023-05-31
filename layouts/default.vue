@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<div class="container">
+		<div class="w-full">
 			<div class="flex">
 				<Sidebar />
-				<div class="ml-80 h-screen w-full">
+				<div class="ml-80 h-[100vh] w-[50%] overflow-x-auto">
 					<slot />
 				</div>
-				<div class="aside_right"></div>
+				<div class="w-96 border-l border-slate-200"></div>
 			</div>
 		</div>
 	</div>
@@ -18,4 +18,12 @@ definePageMeta({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+::-webkit-scrollbar {
+	width: 7px;
+}
+::-webkit-scrollbar-thumb {
+	background: #1d9bf0;
+	border-radius: 50px;
+}
+</style>
